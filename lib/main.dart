@@ -1,4 +1,6 @@
+import 'package:ethconnect/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:ethconnect/utils/routes.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -9,6 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      initialRoute: MyRoutes.loginRoute,
+      routes: {
+        MyRoutes.loginRoute: (context) => const LoginPage(),
+      },
+    );
   }
 }
